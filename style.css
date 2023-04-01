@@ -1,0 +1,448 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     scroll-behavior: smooth;
+}
+.container-body{
+    margin-top: 55px;
+    overflow: hidden;
+  
+}
+/* header ========================== */
+
+.nav-container{
+    background-color: black;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0; 
+    z-index: 100;
+}
+.nav-left{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    gap: 10px
+}
+
+.logo-page{
+    margin: 0 10px;
+}
+.icon-next-logo{
+    padding-top: 5px;
+}
+
+.nav-center {
+    width: 60%;
+}
+
+.nav-center ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap : 50px;
+    list-style-type: none;
+}
+.menu-item a {
+    color: white;
+    font-size: medium;
+    font-size: medium;
+    text-decoration: none;
+}
+.menu-item a:hover{
+    color: orange;
+}
+
+.nav-right{
+    width: 20%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+.btn-click-now button{
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: small;
+    font-weight: bold;
+    transition: ease-in-out all 0.2s;
+}
+.btn-click-now button:hover{
+    padding: 10px 20px ;
+    font-size: medium;
+}
+.btn-menu-mobile{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding-top: 4px;
+    font-size: x-large;    
+    display: none;
+}
+
+
+@media only screen and (max-width: 900px) {
+   .nav-center{
+    display: none;
+   }
+   .nav-container{
+    justify-content: space-around;
+   }
+   .btn-click-now button {
+    width: 100px;
+    font-size: small;
+   }
+    .btn-click-now button:hover{
+        padding: 10px 9px;
+    font-size: small;
+    }
+    .icon-next-logo{
+        display: none;
+    }
+    .btn-menu-mobile{
+        display: block;
+    }
+}
+
+
+/* banner=============================== */
+
+.banner-container{
+    width: 100%;
+    height: 450px;
+    background-image: url('./image/banner.png') ;
+    background-repeat: no-repeat;
+    background-size : cover;
+    background-position: left;
+    position: relative;
+}
+.banner-content{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    right: 20px;
+    display: flex;
+    width: 95%;
+    height: 80%;
+    /* border: 1px solid red; */
+    justify-content: center;
+}
+.text-content{
+    width: 70%;
+}
+.table-content{
+    width: 30%;
+    height: 350px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.table-container p{
+    padding: 0 15px;
+    font-size: larger;
+    font-weight: bold;
+}
+.table-mobile p{
+    padding: 0 15px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.text-content h1{
+    font-size: 50px;
+    color: white;
+}
+.text-parper{
+    width: 70%;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    position: relative;
+}
+.avt{
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.btn-read-more{
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 30px;
+    width: 100px;
+    position: absolute;
+    bottom: -25px;
+    right: -20px;
+}
+.text-content h2{
+    color: orange;
+
+}
+.text-content .btn-subnow{
+    background-color: orange;
+    color: black;
+    width: 250px;
+    padding: 15px 0;
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .banner-content{
+        display: block;
+    }
+    .table-container{
+        margin-top: 30px;
+        width: 90% !important;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .banner-container{
+        height: 100vh;
+    }
+    .text-parper{
+        width: 300px;
+        padding: 5px 15px;
+        
+    }
+    .text-parper p{
+        font-size: 17pt !important;
+        letter-spacing: 0.5px;
+    }
+    .avt{
+        right: 120px;
+        top: -50px
+    }
+    .btn-read-more{
+        bottom: -20px;
+        right: -10px;
+    }
+}
+
+/* footer=============================== */
+footer{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+}
+.gift-container .gift-content{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    height: 40px;
+    background-color: rgb(6, 5, 1);
+    border-top: 4px solid orange ;
+    border-radius: 10px 10px 0 0;
+}
+.gift-container h3{
+    color: white;    
+}
+
+@keyframes gift {
+    from { width: 30px ; height: 30px ;}
+    to { width: 40px ; height: 40px ;}
+}
+.gift-content img{
+    animation: gift 1s infinite;
+    animation-timing-function: ease-in-out;
+
+}
+/* table coin ================ */
+.list-coin{
+    width: 90%;
+    margin: auto;
+}
+.coin-item{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 5px;
+}
+.left-coin {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+}
+.left-coin img{
+    width: 40px;
+    height: 40px;
+}
+.left-coin .info-coin p{
+    padding: 0 0 !important;
+    margin: 0 0 !important;
+}
+.info-coin{
+    margin-top: 5px;
+}
+.right-coin{
+    padding: 0 0 !important;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.right-coin h3,h4 {
+    padding: 0 0 !important;
+    margin: 0 0 !important;
+}
+/* table user ======= */
+.table-container{
+    width: 30%;
+    height: 350px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* coin=============================== */
+.sub-headline-container, .sub-headline-container2{
+    margin: 50px auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deco-line{
+    height: 0.5px;
+    width: 4rem;
+    background-color: rgb(164, 159, 159);
+}
+.lable-heading{
+    padding: 0 10px;
+    font-weight: medium;
+    color: gray;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .sub-headline-container {
+        margin: 150px auto 40px ; 
+    }
+    .sub-headline-container2{
+        margin: 50px auto 40px ;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .sub-headline-container  {
+        margin: 350px auto 10px !important;
+    }
+}
+/* sub headline ========================= */
+
+.slide-message-container{
+    width: 90%;
+    margin: 40px auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-item{
+    height: 450px;
+    width: 450px;
+    position: relative;
+    /* background-color: orange; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 50px 10px;
+    border-radius: 15px;
+    padding: 10px;
+}
+.slick-prev {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    z-index: 2;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: larger;
+    cursor: pointer;
+}
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -15px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: larger;
+    cursor: pointer;
+}
+.avt-feedback{
+    object-fit: cover;
+    position: absolute;
+    top: -50px;
+    left: 40%;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* slide============================ */
+#post-news{
+    border: 1px solid rgb(153, 149, 149);
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 15px 20px;
+    letter-spacing: 0.2px;
+}
+#post-news p{
+    font-size: 14pt;
+}
+#post-news h2{
+    font-weight: bold;
+    letter-spacing: 0;
+    color: black;
+    background-color: rgb(223, 221, 216);
+}
+#let-successfully{
+    background-color: rgb(223, 221, 216);
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+@media only screen and (max-width: 800px) {
+    #post-news img{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
